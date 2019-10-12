@@ -26,16 +26,14 @@ function toMap(str){
 
 
 function anagrams(stringA, stringB) {
-    let regex = /[^\w]/g;
-    let cleanA = cleanInput(stringA);
-    let cleanB = cleanInput(stringB);
+    const cleanA = cleanInput(stringA);
+    const cleanB = cleanInput(stringB);
 
     if (cleanA.length !== cleanB.length) {
         return false;
     } else {
-        let mapA = toMap(cleanA);
-        let mapB = toMap(cleanB);
-
+        const mapA = toMap(cleanA);
+        const mapB = toMap(cleanB);
         return JSON.stringify(mapA) === JSON.stringify(mapB) ? true : false;
     }
 }
